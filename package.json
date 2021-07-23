@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "The best way to watch videos",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "win": "node index.js"
+    "dev": "nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/neulseo/yotube-clone-2021/issues"
   },
-  "homepage": "https://github.com/neulseo/yotube-clone-2021#readme"
+  "homepage": "https://github.com/neulseo/yotube-clone-2021#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.8",
+    "nodemon": "^2.0.12"
+  }
 }
