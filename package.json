@@ -1,0 +1,22 @@
+{
+  "name": "yotube-clone-2021",
+  "version": "1.0.0",
+  "description": "The best way to watch videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neulseo/yotube-clone-2021.git"
+  },
+  "keywords": [
+    "nodeJS"
+  ],
+  "author": "Neul Seo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neulseo/yotube-clone-2021/issues"
+  },
+  "homepage": "https://github.com/neulseo/yotube-clone-2021#readme"
+}
