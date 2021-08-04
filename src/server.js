@@ -2,8 +2,8 @@ import express from "express";
 import morgan from "morgan";
 
 const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
-
 const app = express();
+app.use(morgan("dev"));
 
 const routerLogger = (req, res, next) => {
     console.log("PATH", req.path);
@@ -20,10 +20,16 @@ const home = (req, res) => {
     return res.send("Hello, responding!");
 };
 
-app.use(morgan("dev"));
+// create routers
+const globalRouter = express.Router(); 
+const userRouter = express.Router();
+const videoRouter = express.Router();
 
-// the handleHome should return something, otherwise the browser will be loading forever
-app.get("/", methodLogger, routerLogger, home);
+app.use("/videos", videoRouter);
+app.use("/user", userRouter);
+app.use("/global", globalRouter);
+
+
 
 const handleListening = () => console.log(`Server listening on port http://localhost:${PORT}💨`);
 
