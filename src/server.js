@@ -8,7 +8,7 @@ const handleHome = (req, res) => {
     return res.end();
 }
 
-const handleLogin = (req, res, next) => { // middleware
+const handleLogin = (req, res, next) => { // middleware == controller
     return res.send("login here.");
 }
 app.get("/", handleHome);
