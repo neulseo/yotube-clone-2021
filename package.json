@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/neulseo/yotube-clone-2021#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

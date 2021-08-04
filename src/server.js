@@ -1,4 +1,5 @@
 import express from "express";
+import morgan from "morgan";
 
 const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
 
@@ -18,6 +19,8 @@ const home = (req, res) => {
     console.log("Responding in console!");
     return res.send("Hello, responding!");
 };
+
+app.use(morgan("dev"));
 
 // the handleHome should return something, otherwise the browser will be loading forever
 app.get("/", methodLogger, routerLogger, home);
