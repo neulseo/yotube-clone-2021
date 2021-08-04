@@ -1,20 +1,31 @@
 import express from "express";
 
-const PORT = 4000;
+const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
 
 const app = express();
 
-const handleHome = (req, res) => {
-    return res.end();
-}
+const routerLogger = (req, res, next) => {
+    console.log("PATH", req.path);
+    next();
+};
 
-const handleLogin = (req, res, next) => { // middleware == controller
-    return res.send("login here.");
-}
-app.get("/", handleHome);
-app.get("/login", handleLogin);
+const methodLogger = (req, res, next) => {
+    console.log("METHOD", req.method);
+    next()
+};
 
-const handleListening = () => console.log(`Server listening on port http://localhost:${PORT} ! ;)`)
+const home = (req, res) => {
+    console.log("Responding in console!");
+    return res.send("Hello, responding!");
+};
 
-app.listen(PORT, handleListening);
+// the handleHome should return something, otherwise the browser will be loading forever
+app.get("/", methodLogger, routerLogger, home);
 
+const handleListening = () => console.log(`Server listening on port http://localhost:${PORT}💨`);
+
+app.listen(PORT, handleListening); // very common in nodeJS --> fn(config,handler)
+
+// urls are how we direct our requests
+// our server yet does not have a "door" --route-- to enter
+// http method: GET
