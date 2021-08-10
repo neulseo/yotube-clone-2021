@@ -33,6 +33,7 @@ const videoRouter = express.Router();
 
 const handleWatchVideo = (req, res) => (res.send("Watch Video"));
 
+
 app.use("/videos", videoRouter);
 app.use("/user", userRouter);
 app.use("/global", globalRouter);
