@@ -1,5 +1,8 @@
 import express from "express";
 import morgan from "morgan";
+import globalRouter from "./routers/globalRouter";
+import videoRouter from "./routers/videoRouter";
+import userRouter from "./routers/userRouter";
 
 const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
 const app = express();
@@ -20,23 +23,10 @@ const home = (req, res) => {
     return res.send("Hello, responding!");
 };
 
-// create routers
-const globalRouter = express.Router(); 
 
-const handleHome = (req, res) => res.send("Home");
-
-const userRouter = express.Router();
-
-const handleEditUser = (req, res) => res.send("Edit User");
-
-const videoRouter = express.Router();
-
-const handleWatchVideo = (req, res) => (res.send("Watch Video"));
-
-
-app.use("/videos", videoRouter);
-app.use("/user", userRouter);
 app.use("/global", globalRouter);
+app.use("/user", userRouter);
+app.use("/videos", videoRouter);
 
 
 
@@ -47,3 +37,4 @@ app.listen(PORT, handleListening); // very common in nodeJS --> fn(config,handle
 // urls are how we direct our requests
 // our server yet does not have a "door" --route-- to enter
 // http method: GET
+
