@@ -1,6 +1,6 @@
 # Yotube Reloaded
 
-/ -> Home
+<!-- / -> Home
 
 /users/join
 /users/login
@@ -12,4 +12,4 @@
 /videos/edit -> Edit video
 /videos/delete -> Delete video
 /videos/comments -> Comments on a video
-/videos/comments/delete -> Delete a comment
+/videos/comments/delete -> Delete a comment -->
