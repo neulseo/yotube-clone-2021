@@ -5,7 +5,7 @@ import videoRouter from "./routers/videoRouter";
 import userRouter from "./routers/userRouter";
 
 const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
-const app = express();
+const app = express(); // how to create an Express application 
 app.use(morgan("dev"));
 
 const routerLogger = (req, res, next) => {
