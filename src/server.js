@@ -7,26 +7,8 @@ import userRouter from "./routers/userRouter";
 const app = express(); // how to create an Express application 
 const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
 
-// app.get("/", () => console.log("Let me go home!")); // a function has to be sent
-
-// EXAMPLE: #3.3
-// const handleHome = (req, res) => {
-//     return res.send("<h1>DOOODODO</h1>");
-// }
-// app.get("/", handleHome);
-//----------
-
-// EXAMPLE: #3.5
 const logger = (req, res, next) => {
     console.log(`${req.method} ${req.url}`);
-    next();
-}
-
-const privateMiddleware = (req, res, next) => {
-    const url = req.url;
-    if (url === "/protected") {
-        return res.send("<h1>Not Allowed</h1>")
-    } 
     next();
 }
 
@@ -39,9 +21,8 @@ const handleProtected = (req, res) => {
 }
 // EXAMPLE: #3.6
 app.use(logger);
-app.use(privateMiddleware);
 app.get("/", handleHome);
-app.get("/protected", handleProtected);
+
 //----------
 
 
