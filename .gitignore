@@ -1,3 +1,4 @@
 /node-modules
 node_modules/.cache/@babel/register/.babel.7.14.8.development.json
 *.json
+node_modules/.cache/@babel/register/.babel.7.14.8.development.json
