@@ -1,16 +1,16 @@
 # Yotube Reloaded
 
 / -> Home
-
 /join -> Join
 /login -> Login
 /serach -> Search
 
-/users/edit -> Edit user
+/users/:id -> See user // Go to the user's profile
+/users/logout -> Log out
+/users/edit -> Edit MY profile
 /users/delete -> Delete user
 
 /videos/:id -> Watch video
-/videos/edit -> Edit video
-/videos/delete -> Delete video
-/videos/comments -> Comment on a video
-/videos/comments/delete -> Delete a comment
+/videos/:id/edit -> Edit video
+/videos/:id/delete -> Delete video
+/videos/upload -> Upload video
