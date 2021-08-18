@@ -1,15 +1,16 @@
 # Yotube Reloaded
 
-<!-- / -> Home
+/ -> Home
 
-/users/join
-/users/login
+/join -> Join
+/login -> Login
+/serach -> Search
 
 /users/edit -> Edit user
 /users/delete -> Delete user
 
-/videos/watch -> Watch video
+/videos/:id -> Watch video
 /videos/edit -> Edit video
 /videos/delete -> Delete video
-/videos/comments -> Comments on a video
-/videos/comments/delete -> Delete a comment -->
+/videos/comments -> Comment on a video
+/videos/comments/delete -> Delete a comment
