@@ -1,10 +1,10 @@
-import express from "express";
+// import express from "express";
 
-const globalRouter = express.Router();
+// const globalRouter = express.Router();
 
-const handleHome = (req, res) => res.send("Home");
+// const handleHome = (req, res) => res.send("Home");
 
-globalRouter.get("/", handleHome);
+// globalRouter.get("/", handleHome);
 
-export default globalRouter;
+// export default globalRouter;
 

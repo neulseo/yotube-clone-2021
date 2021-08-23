@@ -1,8 +1,8 @@
-import express from "express";
-import globalRouter from "./globalRouter";
+// import express from "express";
+// import globalRouter from "./globalRouter";
 
-const userRouter = express.Router();
+// const userRouter = express.Router();
 
-const handleHome = (req, res) => res.send("Edit User");
+// const handleHome = (req, res) => res.send("Edit User");
 
-globalRouter.get("/", handleHome);
+// globalRouter.get("/", handleHome);
