@@ -7,7 +7,10 @@ import express from "express";
 const app = express(); // how to create an Express application 
 const PORT = 4000; // we send our requests to PORT (window name: 4000; conventional)
 
-app.get("/", () => console.log("YAHOO!")); // a function must be sent as a res!
+const handleHome = (req, res) => {
+    return res.send("YEEPEE!");
+};
+app.get("/", handleHome); // a function must be sent as a res!
 
 const handleListening = () => {
     console.log(`✅ Server listening on port http://localhost:${PORT}!`);
